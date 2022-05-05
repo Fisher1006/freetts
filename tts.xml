@@ -1,0 +1,10 @@
+<speak xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="http://www.w3.org/2001/mstts"
+       xmlns:emo="http://www.w3.org/2009/10/emotionml" version="1.0" xml:lang="%s">
+    <voice name="%s">
+        <mstts:express-as style="%s" styledegree="%s" role="%s" >
+            <prosody rate="%d%%" pitch="%d%%">
+                %s
+            </prosody>
+        </mstts:express-as>
+    </voice>
+</speak>

@@ -1,0 +1,206 @@
+{
+  "Locale": [
+    "zh-CN",
+    "en-US"
+  ],
+  "Voice": {
+    "zh-CN": {
+      "男声": {
+        "云希": {
+          "id": "zh-CN-YunxiNeural",
+          "role": true,
+          "styledegree": true,
+          "comments": "",
+          "styles": [
+            "angry",
+            "assistant",
+            "cheerful",
+            "depressed",
+            "disgruntled",
+            "embarrassed",
+            "fearful",
+            "narration-relaxed",
+            "sad",
+            "serious"
+          ]
+        },
+        "云杨": {
+          "id": "zh-CN-YunyangNeural",
+          "role": false,
+          "styledegree": true,
+          "comments": "针对新闻阅读进行了优化",
+          "styles": [
+            "customerservice",
+            "narration-professional",
+            "newscast-casual"
+          ]
+        },
+        "云野": {
+          "id": "zh-CN-YunyeNeural",
+          "role": true,
+          "styledegree": true,
+          "comments": "",
+          "styles": [
+            "angry",
+            "calm",
+            "cheerful",
+            "disgruntled",
+            "embarrassed",
+            "fearful",
+            "sad",
+            "serious"
+          ]
+        }
+      },
+      "女声": {
+        "晓辰": {
+          "id": "zh-CN-XiaochenNeural",
+          "role": false,
+          "styledegree": false,
+          "comments": "针对自发对话进行了优化",
+          "styles": []
+        },
+        "晓晗": {
+          "id": "zh-CN-XiaohanNeural",
+          "role": false,
+          "styledegree": true,
+          "comments": "",
+          "styles": [
+            "affectionate",
+            "angry",
+            ",calm",
+            "cheerful",
+            ",disgruntled",
+            "embarrassed",
+            ",fearful",
+            "gentle",
+            "sad",
+            "serious"
+          ]
+        },
+        "晓墨": {
+          "id": "zh-CN-XiaomoNeural",
+          "role": true,
+          "styledegree": true,
+          "comments": "",
+          "styles": [
+            "affectionate",
+            "angry",
+            "calm",
+            "cheerful",
+            "depressed",
+            "disgruntled",
+            "embarrassed",
+            "envious",
+            "fearful",
+            "gentle",
+            "sad",
+            "serious"
+          ]
+        },
+        "晓秋": {
+          "id": "zh-CN-XiaoqiuNeural",
+          "role": false,
+          "styledegree": false,
+          "comments": "针对叙事进行了优化",
+          "styles": []
+        },
+        "晓睿": {
+          "id": "zh-CN-XiaoruiNeural",
+          "role": false,
+          "styledegree": true,
+          "comments": "",
+          "styles": [
+            "angry",
+            "calm",
+            "fearful",
+            "sad"
+          ]
+        },
+        "晓晓": {
+          "id": "zh-CN-XiaoxiaoNeural",
+          "role": false,
+          "styledegree": true,
+          "comments": "",
+          "styles": [
+            "affectionate",
+            "angry",
+            "assistant",
+            "calm",
+            "chat",
+            "cheerful",
+            "customerservice",
+            "disgruntled",
+            "fearful",
+            "gentle",
+            "lyrical",
+            "newscast",
+            "sad",
+            "serious"
+          ]
+        },
+        "晓萱": {
+          "id": "zh-CN-XiaoxuanNeural",
+          "role": false,
+          "styledegree": true,
+          "comments": "",
+          "styles": [
+            "angry",
+            "calm",
+            "cheerful",
+            "depressed",
+            "disgruntled",
+            "fearful",
+            "gentle",
+            "serious"
+          ]
+        },
+        "晓颜": {
+          "id": "zh-CN-XiaoyanNeural",
+          "role": false,
+          "styledegree": false,
+          "comments": "针对客户服务进行了优化",
+          "styles": []
+        }
+      },
+      "童声": {
+        "晓双": {
+          "id": "zh-CN-XiaoshuangNeural",
+          "role": false,
+          "styledegree": true,
+          "comments": "针对儿童故事和聊天进行了优化",
+          "styles": [
+            "chat"
+          ]
+        },
+        "晓悠": {
+          "id": "zh-CN-XiaoyouNeural",
+          "role": false,
+          "styledegree": false,
+          "comments": "针对讲故事进行了优化",
+          "styles": []
+        }
+      }
+    },
+    "en-US": {
+      "Male": {
+        "en-US-BrandonNeural": {
+          "id": "en-US-BrandonNeural",
+          "role": false,
+          "styledegree": false,
+          "comments": "",
+          "styles": []
+        }
+      },
+      "Female": {
+        "en-US-MonicaNeural": {
+          "id": "en-US-MonicaNeural",
+          "role": false,
+          "styledegree": false,
+          "comments": "",
+          "styles": []
+        }
+      }
+    }
+  }
+}
