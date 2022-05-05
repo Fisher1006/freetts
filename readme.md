@@ -9,6 +9,7 @@ https://azure.microsoft.com/zh-cn/services/cognitive-services/text-to-speech/#ov
 # 项目目的和声明
 - 本项目的目的是解决微软官方的网页版demo，不能直接下载转换后的MP3文件以及方便调试声音
 - 本项目仅用于学习交流禁止用于商业用途
+- 本项目核心代码来自：[skygongque/tts](https://github.com/skygongque/tts)
 
 # 使用说明
 1. config/config.json 可以配置速率、音调、强度、角色列表以及风格列表等参数
