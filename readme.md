@@ -17,3 +17,6 @@ https://azure.microsoft.com/zh-cn/services/cognitive-services/text-to-speech/#ov
 4. 点击开始转换，会使用选择的文本和选中的语音配置来转换并保存 mp3 文件到文本所在目录
 5. 直接运行 main.py 即可，可以参考如下演示视频
 
+# 演示视频
+https://user-images.githubusercontent.com/9008110/166864052-507fd4dd-3143-4ab7-a423-4dec6124a11f.mov
+
