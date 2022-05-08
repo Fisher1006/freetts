@@ -13,7 +13,7 @@ async def transferMsTTSData(config, ssml_text, output_path):
     print(req_id)
 
     websocket_endpoint = get_websocket_url(config.get_websocket_endpoint(), auth_token, req_id)
-    async with websockets.connect(websocket_endpoint) as websocket:
+    async with websockets.connect(websocket_endpoint, ping_interval=None, ping_timeout=None) as websocket:
         await websocket.send(get_websocket_message1(req_id))
         await websocket.send(get_websocket_message2(req_id))
         await websocket.send(get_websocket_message3(req_id, ssml_text))
