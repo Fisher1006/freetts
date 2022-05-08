@@ -1,10 +1,10 @@
 {
   "TTSEndPoint": "https://azure.microsoft.com/en-gb/services/cognitive-services/text-to-speech/",
   "WebSocketEndPoint": "wss://eastus.tts.speech.microsoft.com/cognitiveservices/websocket/v1?Authorization=",
-  "MinRate": -50,
+  "MinRate": 0,
   "MaxRate": 300,
-  "MinPitch": -50,
-  "MaxPitch": 50,
+  "MinPitch": 0,
+  "MaxPitch": 100,
   "MinDegree": 1,
   "MaxDegree": 200,
   "Roles": {

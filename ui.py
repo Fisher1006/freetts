@@ -90,19 +90,21 @@ class FreeTTS(QWidget):
         # 语速设置
         min_rate, max_rate = self.config.get_voice_rate()
         self.label_rate, self.line_rate, self.slider_rate = \
-            self.gen_slider_widget('语速：', '0', min_rate, max_rate, self.line_rate_change, self.slider_rate_change)
+            self.gen_slider_widget('语速：', str(min_rate), min_rate, max_rate, self.line_rate_change,
+                                   self.slider_rate_change)
         hbox_rate = self.gen_hbox(self.label_rate, self.slider_rate, self.line_rate)
 
         # 音调
         min_pitch, max_pitch = self.config.get_voice_pitch()
         self.label_pitch, self.line_pitch, self.slider_pitch = \
-            self.gen_slider_widget('音调：', '0', min_pitch, max_pitch, self.line_pitch_change, self.slider_pitch_change)
+            self.gen_slider_widget('音调：', str(min_pitch), min_pitch, max_pitch, self.line_pitch_change,
+                                   self.slider_pitch_change)
         hbox_pitch = self.gen_hbox(self.label_pitch, self.slider_pitch, self.line_pitch)
 
         # 强度 0.01~2 这里扩大 100 倍
         min_degree, max_degree = self.config.get_voice_degree()
         self.label_degree, self.line_degree, self.slider_degree = \
-            self.gen_slider_widget('强度：', '100', min_degree, max_degree, self.line_degree_change,
+            self.gen_slider_widget('强度：', str(min_degree), min_degree, max_degree, self.line_degree_change,
                                    self.slider_degree_change)
         hbox_degree = self.gen_hbox(self.label_degree, self.slider_degree, self.line_degree)
 
@@ -416,8 +418,9 @@ class FreeTTS(QWidget):
         # 由于参数不同生成的内容不同，所以这里每次都重新生成
         # if not os.path.exists(mp3_file_name):
         content = util.read_file("./example/test_text.txt")
-        ssml_text = util.gen_ssml_text(self.voice_language, self.voice_id, self.voice_style, self.voice_degree,
-                                       self.voice_role, self.voice_rate, self.voice_pitch, content)
+        voice_rate, voice_pitch, voice_degree = self.get_voice_args()
+        ssml_text = util.gen_ssml_text(self.voice_language, self.voice_id, self.voice_style, voice_degree,
+                                       self.voice_role, voice_rate, voice_pitch, content)
         asyncio.get_event_loop().run_until_complete(self.run(ssml_text, output_path))
 
         # 输出完成提示框
@@ -429,8 +432,9 @@ class FreeTTS(QWidget):
             QMessageBox.information(None, "提示", "请选择要转换的文件！")
             return
 
-        ssml_text = util.gen_ssml_text(self.voice_language, self.voice_id, self.voice_style, self.voice_degree,
-                                       self.voice_role, self.voice_rate, self.voice_pitch, self.voice_text)
+        voice_rate, voice_pitch, voice_degree = self.get_voice_args()
+        ssml_text = util.gen_ssml_text(self.voice_language, self.voice_id, self.voice_style, voice_degree,
+                                       self.voice_role, voice_rate, voice_pitch, self.voice_text)
         file_name = self.line_select_file.text()
         output_path = util.gen_filename(file_name.split(".")[0], self.voice_id)
         asyncio.get_event_loop().run_until_complete(self.run(ssml_text, output_path))
@@ -440,3 +444,6 @@ class FreeTTS(QWidget):
     # 运行转换
     async def run(self, ssml_text, output_path):
         await tts.transferMsTTSData(self.config, ssml_text, output_path)
+
+    def get_voice_args(self):
+        return self.voice_rate - 100, self.voice_pitch - 50, self.voice_degree / 100
